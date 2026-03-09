@@ -105,7 +105,6 @@ vibe        : "Ship it. Secure it. Scale it."
 
 <br/>
 
-> 🔧 *Top languages reflect public repos — Spring Boot (Java), Python, TypeScript & Angular dominate the stack.*
 
 </div>
 
