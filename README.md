@@ -121,48 +121,6 @@ vibe        : "Ship it. Secure it. Scale it."
   <img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/asura-developer/asura-developer/output/github-contribution-grid-snake-dark.svg" width="100%"/>
 </picture>
 
-<details>
-<summary>⚙️ <b>Click here — How to enable the Snake animation</b></summary>
-
-<br/>
-
-**Step 1:** Create `.github/workflows/snake.yml` inside your `asura-developer` profile repo:
-
-```yaml
-name: Generate Snake Animation
-
-on:
-  schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-
-jobs:
-  generate:
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
-**Step 2:** Push to `main` → Actions auto-generates the snake and pushes SVGs to the `output` branch 🎉
-
-</details>
-
 </div>
 
 ---
